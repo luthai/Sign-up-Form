@@ -18,6 +18,7 @@ body {
 
 .background-container {
     width: 30%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +61,13 @@ body {
 
 .form-container {
     width: 70%;
+    min-height: 100%;
     background-color: rgb(245, 245, 245);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-header-container {
     display: flex;
     flex-direction: column;
 }
@@ -68,8 +75,7 @@ body {
 .form-header {
     margin-top: 10%;
     margin-left: 6%;
-    margin-right: 30%;
-    margin-bottom: 6%;
+    margin-bottom: 4%;
     font-size: 25px;
     font-weight: bold;
     & p {
@@ -79,7 +85,7 @@ body {
 }
 
 .form-main-container {
-    height: 32%;
+   
     background-color: white;
     box-shadow: 0 4px 15px -2px gray;
 }
@@ -110,14 +116,24 @@ body {
                 &:focus {
                     border-color: blue;
                     outline: none;
+                    box-shadow: 0 2px 8px -2px gray;
                 }
             } 
         }
     }
 }
 
+input[type="password"]:invalid {
+    border: 2px solid red;
+  }
+  
+input[type="password"]:valid {
+    border: 2px solid black;
+}
+
 .form-footer-container {
-    height: 30%;
+    display: flex;
+    flex-direction: column;
 }
 
 .form-footer {
